@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yes There Is A New Sheriff In Town</title>
+    <style>
+        body, html { height: 100%; margin: 0; overflow: hidden; }
+        canvas { display: block; vertical-align: bottom; }
+        /* Ensuring the canvas takes full width/height */
+        #heroCanvas { width: 100%; height: 100vh; background: #201a17; /* Dark dusty background */ }
+        .cta-button {
+            position: absolute;
+            top: 50%; /* Centered vertically */
+            left: 50%; /* Centered horizontally */
+            transform: translate(-50%, -50%);
+            padding: 10px 20px;
+            font-size: 24px;
+            color: #fff;
+            background: #b76e23; /* Rusty red for contrast */
+            border: none; /* Removed border */
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        h1 {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace; /* Stylish, typewriter-like font */
+            font-size: 2em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="heroCanvas"></canvas>
+    <button class="cta-button">Me</button>
+    <script>
+        const canvas = document.getElementById('heroCanvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        let particlesArray;
+        let mouse = {
+            x: null,
+            y: null,
+            radius: (canvas.height/80) * (canvas.width/80)
+        };
+
+        window.addEventListener('mousemove', function(event) {
+            mouse.x = event.x;
+            mouse.y = event.y;
+        });
+
+        window.addEventListener('mousedown', function(event) {
+            if (event.target.classList.contains('cta-button')) {
+                particlesArray.forEach(particle => {
+                    particle.speedX *= 5; // Increase speed to scatter particles
+                    particle.speedY *= 5;
+                });
+            }
+        });
+        
+        window.addEventListener('mouseup', function(event) {
+            if (event.target.classList.contains('cta-button')) {
+                particlesArray.forEach(particle => {
+                    particle.speedX /= 5; // Reset speed to normal
+                    particle.speedY /= 5;
+                });
+                window.open('http://github.com/ishto/thereisanewsheriffintown', '_blank'); // Open new tab on release
+            }
+        });
+
+
+        // Create particle
+        class Particle {
+            constructor(x, y, directionX, directionY, size, color) {
+                this.x = x;
+                this.y = y;
+                this.directionX = directionX;
+                this.directionY = directionY;
+                this.size = size;
+                this.color = color;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+            }
+            update() {
+                if (this.x > canvas.width || this.x < 0) {
+                    this.directionX = -this.directionX;
+                }
+                if (this.y > canvas.height || this.y < 0) {
+                    this.directionY = -this.directionY;
+                }
+                let dx = mouse.x - this.x;
+                let dy = mouse.y - this.y;
+                let distance = Math.sqrt(dx*dx + dy*dy);
+                if (distance < mouse.radius + this.size) {
+                    if (mouse.x < this.x && this.x < canvas.width - this.size * 10) {
+                        this.x += 1;
+                    }
+                    if (mouse.x > this.x && this.x > this.size * 10) {
+                        this.x -= 1;
+                    }
+                    if (mouse.y < this.y && this.y < canvas.height - this.size * 10) {
+                        this.y += 1;
+                    }
+                    if (mouse.y > this.y && this.y > this.size * 10) {
+                        this.y -= 1;
+                    }
+                }
+                this.x += this.directionX;
+                this.y += this.directionY;
+                this.draw();
+            }
+        }
+
+        function init() {
+            particlesArray = [];
+            let numberOfParticles = 100;
+            for (let i = 0; i < numberOfParticles; i++) {
+                let size = (Math.random() * 5) + 1;
+                let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
+                let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
+                let directionX = (Math.random() * 5) - 2.5;
+                let directionY = (Math.random() * 5) - 2.5;
+                let color = 'rgba(255, 255, 255, 0.8)'; // Dust-like color
+
+                particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
+            }
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+            ctx.clearRect(0, 0, innerWidth, innerHeight);
+
+            for (let i = 0; i < particlesArray.length; i++) {
+                particlesArray[i].update();
+            }
+        }
+
+        init();
+        animate();
+
+        window.addEventListener('resize', () => {
+            canvas.width = innerWidth;
+            canvas.height = innerHeight;
+            mouse.radius = (canvas.height/80) * (canvas.width/80);
+            init();
+        });
+    </script>
+</body>
+</html>

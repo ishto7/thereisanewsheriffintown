@@ -10,10 +10,10 @@ export default function Home() {
         <div className="space-y-8">
           <section className="text-center space-y-4">
             <h1 className="text-4xl md:text-6xl text-amber-900 font-bold">
-              Sheriff's Tales & Wisdom
+              There's a New Sheriff in Town
             </h1>
             <p className="text-lg text-amber-800">
-              Exploring the rich legacy of sheriffs through stories, sayings, and cultural impact
+              Exploring the rich history and cultural impact of this iconic phrase
             </p>
           </section>
 

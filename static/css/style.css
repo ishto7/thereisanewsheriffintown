@@ -1,0 +1,181 @@
+/* Western Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Rye&display=swap');
+
+/* Variables */
+:root {
+    --western-brown: #8B4513;
+    --leather-tan: #D2691E;
+    --dust-gray: #A9A9A9;
+    --wood-dark: #5C4033;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: var(--bs-dark);
+    color: var(--bs-light);
+}
+
+h1, h2, h3 {
+    font-family: 'Rye', cursive;
+}
+
+/* Navigation */
+.navbar {
+    background-color: var(--wood-dark);
+    border-bottom: 3px solid var(--western-brown);
+}
+
+.navbar-brand {
+    font-family: 'Rye', cursive;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Content Sections */
+.content-section {
+    padding: 4rem 0;
+}
+
+.fact-box {
+    background-color: var(--wood-dark);
+    border: 2px solid var(--western-brown);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.fact-box ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.fact-box li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.fact-box li:before {
+    content: "★";
+    position: absolute;
+    left: 0;
+    color: var(--leather-tan);
+}
+
+/* Social Media Feed */
+.social-feed {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.post {
+    background-color: var(--bs-dark);
+    border: 1px solid var(--western-brown);
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+}
+
+.post-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+/* Content Cards */
+.content-card {
+    background-color: var(--bs-dark);
+    border: 2px solid var(--western-brown);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    height: 100%;
+}
+
+.proverb-list li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.joke {
+    padding: 1rem;
+    background-color: rgba(139, 69, 19, 0.2);
+    border-radius: 4px;
+}
+
+.punchline {
+    color: var(--leather-tan);
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+/* Section Visibility */
+.hidden-section {
+    display: none;
+}
+
+.active-section {
+    display: block;
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--wood-dark);
+    color: var(--bs-light);
+    padding: 1rem 0;
+    text-align: center;
+    border-top: 3px solid var(--western-brown);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        height: 40vh;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .content-section {
+        padding: 2rem 0;
+    }
+}

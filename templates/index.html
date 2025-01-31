@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Sheriff in Town - Western Proverbs</title>
+    <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fas fa-star-sheriff"></i> Western Proverbs</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home" data-section="home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#social" data-section="social">Social Media</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#related" data-section="related">Related Content</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="active-section">
+            <div class="hero">
+                <img src="https://images.unsplash.com/photo-1691162378286-87118c027167" alt="Western Sheriff">
+                <div class="hero-content">
+                    <h1>"There's a New Sheriff in Town"</h1>
+                    <p class="lead">A powerful declaration of authority and change</p>
+                </div>
+            </div>
+            
+            <div class="container content-section">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h2><i class="fas fa-scroll"></i> Origin & Meaning</h2>
+                        <p>This iconic Western phrase emerged from the American frontier era, where the arrival of a new sheriff often meant significant changes in law enforcement and local governance.</p>
+                        <p>Today, it's commonly used to announce a change in leadership or authority, particularly when someone new takes charge and implements different rules or methods.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="fact-box">
+                            <h3><i class="fas fa-star"></i> Quick Facts</h3>
+                            <ul>
+                                <li>Origin: American Old West</li>
+                                <li>Era: 19th Century</li>
+                                <li>Category: Authority Idiom</li>
+                                <li>Usage: Business & Leadership</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Section -->
+        <section id="social" class="hidden-section">
+            <div class="container">
+                <h2><i class="fas fa-comments"></i> Social Media Buzz</h2>
+                <div class="social-feed">
+                    <!-- Twitter-style posts -->
+                    <div class="post">
+                        <img src="https://images.unsplash.com/photo-1558958267-ec665c2dcb6b" alt="Old West Town" class="post-image">
+                        <div class="post-content">
+                            <h4>@WesternHistory</h4>
+                            <p>"The phrase 'new sheriff in town' was literally used in Dodge City when Wyatt Earp took office! #WildWest #History"</p>
+                        </div>
+                    </div>
+                    <!-- More social media content... -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Content Section -->
+        <section id="related" class="hidden-section">
+            <div class="container">
+                <h2><i class="fas fa-hat-cowboy"></i> Related Proverbs & Jokes</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="content-card">
+                            <h3>Similar Proverbs</h3>
+                            <ul class="proverb-list">
+                                <li>"This town ain't big enough for the both of us"</li>
+                                <li>"Law and order has come to town"</li>
+                                <li>"Time to clean up this town"</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="content-card">
+                            <h3>Western Jokes</h3>
+                            <div class="joke">
+                                <p>What did the new sheriff say to his deputy?</p>
+                                <p class="punchline">"Badge news travels fast!"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Western Proverbs | <i class="fas fa-horse"></i> Ride Safe!</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

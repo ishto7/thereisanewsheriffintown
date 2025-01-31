@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { jokes, categories } from "@/data/jokes";
+import { jokes } from "@/data/jokes";
 
 export default function Jokes() {
   return (
@@ -11,23 +11,12 @@ export default function Jokes() {
         <div className="space-y-8">
           <section className="text-center space-y-4">
             <h1 className="text-4xl md:text-6xl text-amber-900 font-bold">
-              New Sheriff Jokes
+              Sheriff Humor Corner
             </h1>
             <p className="text-lg text-amber-800">
-              Because every new beginning needs a little laughter!
+              A collection of witty jokes about new leadership and change
             </p>
           </section>
-
-          <div className="flex gap-4 flex-wrap justify-center">
-            {categories.map((category) => (
-              <Badge
-                key={category}
-                className="bg-amber-800 text-amber-50 capitalize"
-              >
-                {category}
-              </Badge>
-            ))}
-          </div>
 
           <ScrollArea className="h-[600px] rounded-lg p-4">
             <div className="grid md:grid-cols-2 gap-6">
@@ -37,9 +26,6 @@ export default function Jokes() {
                     <div className="flex gap-2 flex-wrap">
                       <Badge className="bg-amber-800 text-amber-50">
                         Joke #{index + 1}
-                      </Badge>
-                      <Badge variant="outline" className="capitalize">
-                        {joke.category}
                       </Badge>
                     </div>
                     <div className="space-y-4">

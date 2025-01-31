@@ -24,8 +24,8 @@ export default defineNuxtConfig({
       ]
     }
   },
-  ssr: true,
+  // Configure for Vercel deployment
   nitro: {
-    preset: 'node-server'
+    preset: 'vercel',
   }
 })

@@ -7,7 +7,27 @@ import {
   SiInstagram, 
   SiLinkedin 
 } from "react-icons/si";
-import { socialPosts } from "@/data/social";
+import { socialPosts, type SocialPost } from "@/data/social";
+
+const getLikes = (post: SocialPost, platform: string) => {
+  if (platform === "Reddit" && "upvotes" in post) {
+    return post.upvotes;
+  }
+  if (platform === "LinkedIn" && "reactions" in post) {
+    return post.reactions;
+  }
+  if ("likes" in post) {
+    return post.likes;
+  }
+  return "";
+};
+
+const getSubreddit = (post: SocialPost): string | undefined => {
+  if ("subreddit" in post) {
+    return post.subreddit;
+  }
+  return undefined;
+};
 
 export default function Social() {
   return (
@@ -42,12 +62,12 @@ export default function Social() {
                           <div className="flex gap-4 text-sm text-amber-700">
                             <span className="flex items-center gap-1">
                               {platform.platform === "Reddit" ? "⬆️" : "❤️"}
-                              {platform.platform === "Reddit" ? post.upvotes : 
-                               platform.platform === "LinkedIn" ? post.reactions :
-                               post.likes}
+                              {getLikes(post, platform.platform)}
                             </span>
                             <span>📅 {post.date}</span>
-                            {post.subreddit && <span>📍 {post.subreddit}</span>}
+                            {getSubreddit(post) && (
+                              <span>📍 {getSubreddit(post)}</span>
+                            )}
                           </div>
                         </div>
                       ))}

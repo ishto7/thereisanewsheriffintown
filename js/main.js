@@ -8,11 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const targetId = link.getAttribute('href').substring(1);
-            
+
             // Update active states
             navLinks.forEach(l => l.classList.remove('active'));
             link.classList.add('active');
-            
+
             pages.forEach(page => {
                 page.classList.remove('active');
                 if (page.id === targetId) {
@@ -50,15 +50,15 @@ function loadPageContent(pageId) {
 function generateHomePage() {
     return `
         <div class="home-container">
-            <header class="text-center space-y-4">
-                <h1 class="text-4xl">There's a New Sheriff in Town</h1>
-                <p class="text-lg">Exploring the rich history and cultural impact of this iconic phrase</p>
+            <header class="text-center">
+                <h1>There's a New Sheriff in Town</h1>
+                <p class="subtitle">Exploring the rich history and cultural impact of this iconic phrase</p>
             </header>
             <div class="cards-container">
                 ${historicalContent.map(content => `
                     <div class="card">
                         <span class="badge-small">${content.category}</span>
-                        <h2 class="card-title">${content.title}</h2>
+                        <h2>${content.title}</h2>
                         <p>${content.description}</p>
                     </div>
                 `).join('')}
@@ -70,9 +70,9 @@ function generateHomePage() {
 function generateJokesPage() {
     return `
         <div class="jokes-container">
-            <header class="text-center space-y-4">
-                <h1 class="text-4xl">Sheriff Humor Corner</h1>
-                <p class="text-lg">A collection of witty jokes about new leadership and change</p>
+            <header class="text-center">
+                <h1>Sheriff Humor Corner</h1>
+                <p class="subtitle">A collection of witty jokes about new leadership and change</p>
             </header>
             <div class="cards-container">
                 ${jokes.map((joke, index) => `
@@ -128,7 +128,6 @@ function generateSocialPage() {
                                     <span>${post.date}</span>
                                     ${post.likes ? `<span>❤️ ${post.likes}</span>` : ''}
                                     ${post.reactions ? `<span>👍 ${post.reactions}</span>` : ''}
-                                    ${post.upvotes ? `<span>⬆️ ${post.upvotes}</span>` : ''}
                                 </div>
                             </div>
                         `).join('')}

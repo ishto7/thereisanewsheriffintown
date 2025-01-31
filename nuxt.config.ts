@@ -26,6 +26,6 @@ export default defineNuxtConfig({
   },
   // Configure for Vercel deployment
   nitro: {
-    preset: 'vercel',
+    preset: 'vercel'
   }
 })

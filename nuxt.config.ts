@@ -23,5 +23,13 @@ export default defineNuxtConfig({
         }
       ]
     }
+  },
+  // Configure server to run on Replit's port
+  nitro: {
+    preset: 'node-server',
+    server: {
+      host: '0.0.0.0',
+      port: 5000
+    }
   }
 })

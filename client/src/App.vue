@@ -1,51 +1,28 @@
 <template>
-  <div class="min-h-screen flex flex-col">
-    <Navbar />
-    <main class="flex-1">
-      <router-view></router-view>
-    </main>
-    <Toaster />
+  <div class="app">
+    <h1>Welcome to Vue</h1>
+    <p>A minimal Vue.js application</p>
   </div>
 </template>
 
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
-import Navbar from './components/Navbar.vue'
-import { Toaster } from '@/components/ui/toaster'
+// No setup needed for now
 </script>
 
 <style>
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply font-sans antialiased bg-background text-foreground;
-  }
-
-  @font-face {
-    font-family: 'RyeFontRegular';
-    src: url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Rye', cursive;
-  }
+.app {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
 }
 
-@layer components {
-  .western-card {
-    @apply bg-amber-50 border-2 border-amber-900/20 shadow-lg rounded-lg overflow-hidden;
-  }
+h1 {
+  color: #42b883;
+}
 
-  .western-button {
-    @apply bg-amber-800 hover:bg-amber-900 text-amber-50 font-bold py-2 px-4 rounded-md 
-    shadow-md transition-all duration-200 ease-in-out;
-  }
+p {
+  color: #2c3e50;
 }
 </style>

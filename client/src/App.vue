@@ -4,11 +4,14 @@
     <main class="flex-1">
       <router-view></router-view>
     </main>
+    <Toaster />
   </div>
 </template>
 
 <script setup lang="ts">
+import { RouterView } from 'vue-router'
 import Navbar from './components/Navbar.vue'
+import { Toaster } from '@/components/ui/toaster'
 </script>
 
 <style>
@@ -39,7 +42,7 @@ import Navbar from './components/Navbar.vue'
   .western-card {
     @apply bg-amber-50 border-2 border-amber-900/20 shadow-lg rounded-lg overflow-hidden;
   }
-  
+
   .western-button {
     @apply bg-amber-800 hover:bg-amber-900 text-amber-50 font-bold py-2 px-4 rounded-md 
     shadow-md transition-all duration-200 ease-in-out;

@@ -1,5 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Navigation handling
+    // Navigation toggle for mobile
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    navToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+    });
+
+    // Section switching
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('section');
 
@@ -30,7 +38,12 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             const sectionId = link.getAttribute('data-section');
             switchSection(sectionId);
-            
+
+            // Close mobile menu if open
+            if (navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+            }
+
             // Update URL hash without scrolling
             history.pushState(null, null, `#${sectionId}`);
         });
@@ -45,18 +58,4 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize correct section based on URL hash
     const initialSection = window.location.hash.slice(1) || 'home';
     switchSection(initialSection);
-
-    // Mobile menu collapse after click
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    const navbarCollapse = document.querySelector('.navbar-collapse');
-
-    if (navbarToggler && navbarCollapse) {
-        document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                if (navbarCollapse.classList.contains('show')) {
-                    navbarToggler.click();
-                }
-            });
-        });
-    }
 });

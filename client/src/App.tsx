@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Jokes from "./pages/Jokes";
 import Sayings from "./pages/Sayings";
+import Social from "./pages/Social";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -14,6 +15,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/jokes" component={Jokes} />
       <Route path="/sayings" component={Sayings} />
+      <Route path="/social" component={Social} />
       <Route component={NotFound} />
     </Switch>
   );

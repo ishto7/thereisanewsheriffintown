@@ -1,25 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-
-const jokes = [
-  {
-    setup: "What did the new sheriff say on his first day?",
-    punchline: "Time to clean up this one-horse town... as soon as I find the horse!",
-  },
-  {
-    setup: "How do you know when there's a new sheriff in town?",
-    punchline: "The old one is still looking for his parking spot!",
-  },
-  {
-    setup: "What's the first thing a new sheriff does in town?",
-    punchline: "Changes everything to 'new and improved' - even the wanted posters!",
-  },
-  {
-    setup: "Why did the new sheriff bring a ladder to work?",
-    punchline: "Because they told him crime was on the rise!",
-  },
-];
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { jokes, categories } from "@/data/jokes";
 
 export default function Jokes() {
   return (
@@ -35,20 +18,51 @@ export default function Jokes() {
             </p>
           </section>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {jokes.map((joke, index) => (
-              <Card key={index} className="western-card">
-                <CardContent className="p-6 space-y-4">
-                  <Badge className="bg-amber-800 text-amber-50">Joke #{index + 1}</Badge>
-                  <div className="space-y-4">
-                    <p className="text-lg font-semibold text-amber-900">{joke.setup}</p>
-                    <Separator className="bg-amber-200" />
-                    <p className="text-amber-800 italic">{joke.punchline}</p>
-                  </div>
-                </CardContent>
-              </Card>
+          <div className="flex gap-4 flex-wrap justify-center">
+            {categories.map((category) => (
+              <Badge
+                key={category}
+                className="bg-amber-800 text-amber-50 capitalize"
+              >
+                {category}
+              </Badge>
             ))}
           </div>
+
+          <ScrollArea className="h-[600px] rounded-lg p-4">
+            <div className="grid md:grid-cols-2 gap-6">
+              {jokes.map((joke, index) => (
+                <Card key={index} className="western-card">
+                  <CardContent className="p-6 space-y-4">
+                    <div className="flex gap-2 flex-wrap">
+                      <Badge className="bg-amber-800 text-amber-50">
+                        Joke #{index + 1}
+                      </Badge>
+                      <Badge variant="outline" className="capitalize">
+                        {joke.category}
+                      </Badge>
+                    </div>
+                    <div className="space-y-4">
+                      <p className="text-lg font-semibold text-amber-900">{joke.setup}</p>
+                      <Separator className="bg-amber-200" />
+                      <p className="text-amber-800 italic">{joke.punchline}</p>
+                    </div>
+                    <div className="flex gap-2 flex-wrap">
+                      {joke.tags.map((tag) => (
+                        <Badge
+                          key={tag}
+                          variant="secondary"
+                          className="bg-amber-100 text-amber-800"
+                        >
+                          #{tag}
+                        </Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </ScrollArea>
         </div>
       </div>
     </div>

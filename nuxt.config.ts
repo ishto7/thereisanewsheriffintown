@@ -22,14 +22,21 @@ export default defineNuxtConfig({
           href: 'https://fonts.googleapis.com/css2?family=Rye&display=swap'
         }
       ]
-    }
+    },
+    // Updated baseURL and buildAssetsDir for production
+    baseURL: '/',
+    buildAssetsDir: '/_nuxt/'
   },
-  // Configure server to run on Replit's port
+  // Configure for production
   nitro: {
     preset: 'node-server',
     server: {
       host: '0.0.0.0',
       port: 5000
     }
+  },
+  // Ensure proper static file generation
+  generate: {
+    fallback: true
   }
 })

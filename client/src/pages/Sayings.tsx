@@ -3,24 +3,29 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 
 const sayings = [
   {
-    quote: "Justice rides a horse called Patience.",
-    author: "Old West Proverb",
+    quote: "There's a new sheriff in town",
+    origin: "American Old West",
+    meaning: "A new authority figure has arrived, bringing significant changes",
   },
   {
-    quote: "A badge don't make a sheriff, but a sheriff always earns the badge.",
-    author: "Wild Bill Hickok",
+    quote: "新官上任三把火",
+    origin: "Chinese Proverb",
+    meaning: "A new official brings three fires - meaning new leaders often start with dramatic changes",
   },
   {
-    quote: "The law may be slow, but justice is sure.",
-    author: "Sheriff's Wisdom",
+    quote: "Un nuevo rey, una nueva ley",
+    origin: "Spanish Proverb",
+    meaning: "New king, new law - similar to new sheriff, emphasizing how new leadership brings new rules",
   },
   {
-    quote: "A good sheriff listens more than they speak.",
-    author: "Western Philosophy",
+    quote: "Nouveau roi, nouvelle loi",
+    origin: "French Saying",
+    meaning: "New king, new law - the French equivalent emphasizing change with new leadership",
   },
   {
-    quote: "True peace comes from strength, not force.",
-    author: "Sheriff's Code",
+    quote: "Ein neuer Besen kehrt gut",
+    origin: "German Proverb",
+    meaning: "A new broom sweeps well - referring to how new leadership often brings fresh energy and change",
   },
 ];
 
@@ -31,10 +36,10 @@ export default function Sayings() {
         <div className="space-y-8">
           <section className="text-center space-y-4">
             <h1 className="text-4xl md:text-6xl text-amber-900 font-bold">
-              Sheriff's Wisdom
+              Global Wisdom
             </h1>
             <p className="text-lg text-amber-800">
-              Words that echo through the canyons of time
+              How different cultures express the arrival of new leadership
             </p>
           </section>
 
@@ -47,9 +52,14 @@ export default function Sayings() {
                       <p className="text-xl text-amber-900 italic">
                         "{saying.quote}"
                       </p>
-                      <footer className="text-sm text-amber-700 font-semibold">
-                        — {saying.author}
-                      </footer>
+                      <div className="space-y-2">
+                        <p className="text-sm text-amber-700 font-semibold">
+                          Origin: {saying.origin}
+                        </p>
+                        <p className="text-sm text-amber-800">
+                          {saying.meaning}
+                        </p>
+                      </div>
                     </blockquote>
                   </CardContent>
                 </Card>

@@ -3,12 +3,12 @@ import { createRouter, createWebHistory } from 'vue-router'
 import App from './App.vue'
 import './index.css'
 
-// Import pages
+// Import pages with .vue extension
 import Home from './pages/Home.vue'
 import Jokes from './pages/Jokes.vue'
 import Sayings from './pages/Sayings.vue'
 import Social from './pages/Social.vue'
-import NotFound from './pages/not-found.vue'
+import NotFound from './pages/NotFound.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -17,10 +17,10 @@ const router = createRouter({
     { path: '/jokes', component: Jokes },
     { path: '/sayings', component: Sayings },
     { path: '/social', component: Social },
-    { path: '/:pathMatch(.*)*', component: NotFound }
+    { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound }
   ]
 })
 
 const app = createApp(App)
 app.use(router)
-app.mount('#root')
+app.mount('#app')

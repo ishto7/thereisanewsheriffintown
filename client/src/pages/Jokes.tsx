@@ -4,20 +4,20 @@ import { Separator } from "@/components/ui/separator";
 
 const jokes = [
   {
-    setup: "Why don't sheriffs tell dad jokes?",
-    punchline: "Because they're already lawful-awful!",
+    setup: "What did the new sheriff say on his first day?",
+    punchline: "Time to clean up this one-horse town... as soon as I find the horse!",
   },
   {
-    setup: "What did the sheriff say to his deputy at the saloon?",
-    punchline: "This drink is under a-rest!",
+    setup: "How do you know when there's a new sheriff in town?",
+    punchline: "The old one is still looking for his parking spot!",
   },
   {
-    setup: "How does a sheriff take his coffee?",
-    punchline: "Law-ng and black!",
+    setup: "What's the first thing a new sheriff does in town?",
+    punchline: "Changes everything to 'new and improved' - even the wanted posters!",
   },
   {
-    setup: "What's a sheriff's favorite dessert?",
-    punchline: "Just-ice cream!",
+    setup: "Why did the new sheriff bring a ladder to work?",
+    punchline: "Because they told him crime was on the rise!",
   },
 ];
 
@@ -28,10 +28,10 @@ export default function Jokes() {
         <div className="space-y-8">
           <section className="text-center space-y-4">
             <h1 className="text-4xl md:text-6xl text-amber-900 font-bold">
-              Sheriff's Joke Corner
+              New Sheriff Jokes
             </h1>
             <p className="text-lg text-amber-800">
-              Where the laughs are as wild as the west!
+              Because every new beginning needs a little laughter!
             </p>
           </section>
 

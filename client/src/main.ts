@@ -1,14 +1,14 @@
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
-import App from './App.vue'
-import './index.css'
+import App from '@/App.vue'
+import '@/index.css'
 
-// Import pages with .vue extension
-import Home from './pages/Home.vue'
-import Jokes from './pages/Jokes.vue'
-import Sayings from './pages/Sayings.vue'
-import Social from './pages/Social.vue'
-import NotFound from './pages/NotFound.vue'
+// Import pages
+import Home from '@/pages/Home.vue'
+import Jokes from '@/pages/Jokes.vue'
+import Sayings from '@/pages/Sayings.vue'
+import Social from '@/pages/Social.vue'
+import NotFound from '@/pages/NotFound.vue'
 
 const router = createRouter({
   history: createWebHistory(),

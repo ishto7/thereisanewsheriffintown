@@ -1,0 +1,131 @@
+/* Base styles */
+:root {
+    --primary: hsl(27, 51%, 39%);
+    --background: hsl(43, 100%, 98%);
+    --text: hsl(27, 51%, 29%);
+    --amber-50: hsl(48, 100%, 96%);
+    --amber-100: hsl(48, 96%, 89%);
+    --amber-800: hsl(46, 97%, 15%);
+    --amber-900: hsl(45, 94%, 12%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rye', cursive;
+    color: var(--amber-900);
+}
+
+/* Navigation */
+.navbar {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.badge {
+    font-family: 'Rye', cursive;
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--amber-800);
+    border-radius: 0.25rem;
+    color: var(--amber-800);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text);
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s;
+}
+
+.nav-link:hover {
+    background-color: var(--amber-50);
+}
+
+.nav-link.active {
+    background-color: var(--amber-100);
+    color: var(--amber-800);
+}
+
+/* Cards */
+.card {
+    background-color: var(--amber-50);
+    border: 2px solid rgba(120, 53, 15, 0.1);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.badge-small {
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+    background-color: var(--amber-800);
+    color: white;
+    border-radius: 0.25rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+/* Pages */
+.page {
+    display: none;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page.active {
+    display: block;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}

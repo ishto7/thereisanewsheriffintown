@@ -1,33 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
-
-const sayings = [
-  {
-    quote: "There's a new sheriff in town",
-    origin: "American Old West",
-    meaning: "A new authority figure has arrived, bringing significant changes",
-  },
-  {
-    quote: "新官上任三把火",
-    origin: "Chinese Proverb",
-    meaning: "A new official brings three fires - meaning new leaders often start with dramatic changes",
-  },
-  {
-    quote: "Un nuevo rey, una nueva ley",
-    origin: "Spanish Proverb",
-    meaning: "New king, new law - similar to new sheriff, emphasizing how new leadership brings new rules",
-  },
-  {
-    quote: "Nouveau roi, nouvelle loi",
-    origin: "French Saying",
-    meaning: "New king, new law - the French equivalent emphasizing change with new leadership",
-  },
-  {
-    quote: "Ein neuer Besen kehrt gut",
-    origin: "German Proverb",
-    meaning: "A new broom sweeps well - referring to how new leadership often brings fresh energy and change",
-  },
-];
+import { sayings, regions } from "@/data/sayings";
 
 export default function Sayings() {
   return (
@@ -43,24 +17,66 @@ export default function Sayings() {
             </p>
           </section>
 
+          <div className="flex gap-4 flex-wrap justify-center">
+            {regions.map((region) => (
+              <Badge
+                key={region}
+                className="bg-amber-800 text-amber-50"
+              >
+                {region}
+              </Badge>
+            ))}
+          </div>
+
           <ScrollArea className="h-[600px] rounded-lg p-4">
             <div className="space-y-6">
               {sayings.map((saying, index) => (
                 <Card key={index} className="western-card">
                   <CardContent className="p-6">
-                    <blockquote className="space-y-4">
-                      <p className="text-xl text-amber-900 italic">
-                        "{saying.quote}"
-                      </p>
+                    <div className="space-y-6">
                       <div className="space-y-2">
-                        <p className="text-sm text-amber-700 font-semibold">
-                          Origin: {saying.origin}
+                        <p className="text-xl text-amber-900 italic">
+                          "{saying.quote}"
                         </p>
-                        <p className="text-sm text-amber-800">
-                          {saying.meaning}
-                        </p>
+                        <div className="flex gap-2">
+                          <Badge variant="outline" className="text-amber-800">
+                            {saying.origin}
+                          </Badge>
+                        </div>
                       </div>
-                    </blockquote>
+
+                      <div className="space-y-4">
+                        <div className="space-y-2">
+                          <h3 className="font-semibold text-amber-900">Meaning</h3>
+                          <p className="text-amber-800">{saying.meaning}</p>
+                        </div>
+
+                        <div className="space-y-2">
+                          <h3 className="font-semibold text-amber-900">Historical Context</h3>
+                          <p className="text-amber-800">{saying.context}</p>
+                        </div>
+
+                        <div className="space-y-2">
+                          <h3 className="font-semibold text-amber-900">Common Variants</h3>
+                          <div className="flex gap-2 flex-wrap">
+                            {saying.variants.map((variant, i) => (
+                              <Badge
+                                key={i}
+                                variant="secondary"
+                                className="bg-amber-100 text-amber-800"
+                              >
+                                {variant}
+                              </Badge>
+                            ))}
+                          </div>
+                        </div>
+
+                        <div className="space-y-2">
+                          <h3 className="font-semibold text-amber-900">Common Usage</h3>
+                          <p className="text-amber-800">{saying.usage}</p>
+                        </div>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
               ))}

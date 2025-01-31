@@ -10,34 +10,27 @@
 <body>
     <nav class="navbar">
         <div class="container">
-            <a class="brand" href="#"><i class="fas fa-star-sheriff"></i> Western Proverbs</a>
-            <button class="nav-toggle" type="button">
-                <span class="toggle-icon"></span>
+            <a class="brand" href="#"><i class="fas fa-star"></i> Western Proverbs</a>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
             </button>
-            <div class="nav-menu">
+            <div class="nav-menu" id="navMenu">
                 <ul class="nav-list">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#home" data-section="home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#social" data-section="social">Social Media</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#related" data-section="related">Related Content</a>
-                    </li>
+                    <li><a class="nav-link active" href="#home" data-section="home">Home</a></li>
+                    <li><a class="nav-link" href="#social" data-section="social">Social Feed</a></li>
+                    <li><a class="nav-link" href="#related" data-section="related">Related Content</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <main>
-        <!-- Home Section -->
         <section id="home" class="active-section">
             <div class="hero">
-                <img src="https://images.unsplash.com/photo-1691162378286-87118c027167" alt="Western Sheriff">
+                <img src="https://images.unsplash.com/photo-1533106497176-45ae19e68ba2" alt="Western landscape">
                 <div class="hero-content">
-                    <h1>"There's a New Sheriff in Town"</h1>
-                    <p class="lead">A powerful declaration of authority and change</p>
+                    <h1>There's A New Sheriff In Town</h1>
+                    <p>Exploring the iconic Western proverb that shaped American culture</p>
                 </div>
             </div>
 
@@ -47,44 +40,27 @@
                         <h2><i class="fas fa-scroll"></i> Origin & Historical Context</h2>
                         <p>The phrase "There's a new sheriff in town" emerged during the American frontier era of the 1800s, when law enforcement in the Wild West was often personified by a single authority figure - the sheriff. In those tumultuous times, the arrival of a new sheriff could mark a significant turning point for a town's future.</p>
 
-                        <h3>Historical Significance</h3>
-                        <ul class="historical-list">
-                            <li>1860s-1890s: Peak period of the American frontier expansion</li>
-                            <li>Famous sheriffs like Wyatt Earp and Wild Bill Hickok became legends</li>
-                            <li>The phrase represented hope for communities plagued by lawlessness</li>
-                            <li>Often marked the transition from frontier chaos to civilized order</li>
-                        </ul>
-
-                        <h3>Modern Usage & Meaning</h3>
-                        <p>Today, the phrase has transcended its literal meaning to become a powerful metaphor for:</p>
-                        <ul>
-                            <li>New leadership taking control</li>
-                            <li>Organizational change and reform</li>
-                            <li>Establishment of new rules or policies</li>
-                            <li>Assertion of authority in various contexts</li>
-                        </ul>
-
-                        <h3>Cultural Impact</h3>
-                        <p>The phrase has become deeply embedded in popular culture through:</p>
-                        <ul>
-                            <li>Western films and TV shows</li>
-                            <li>Political speeches and campaigns</li>
-                            <li>Business leadership transitions</li>
-                            <li>Sports team management changes</li>
-                        </ul>
+                        <h3>Modern Usage</h3>
+                        <p>Today, the phrase has transcended its literal meaning to become a powerful metaphor for change in leadership or authority. It's commonly used in various contexts:</p>
+                        
+                        <div class="usage-examples">
+                            <ul>
+                                <li>Corporate leadership changes</li>
+                                <li>Political transitions</li>
+                                <li>Educational administration</li>
+                                <li>Sports team management changes</li>
+                            </ul>
+                        </div>
                     </div>
+                    
                     <div class="sidebar">
                         <div class="fact-box">
                             <h3><i class="fas fa-star"></i> Quick Facts</h3>
                             <ul>
-                                <li>Origin: American Old West</li>
-                                <li>Era: 19th Century</li>
-                                <li>Category: Authority Idiom</li>
-                                <li>Usage: Business & Leadership</li>
-                                <li>Context: Change Management</li>
-                                <li>Type: Declarative Statement</li>
-                                <li>Tone: Assertive</li>
-                                <li>Cultural Impact: High</li>
+                                <li>First documented use: circa 1800s</li>
+                                <li>Original context: American Wild West</li>
+                                <li>Modern usage: Leadership changes</li>
+                                <li>Cultural impact: High</li>
                             </ul>
                         </div>
 
@@ -92,11 +68,6 @@
                             <h3><i class="fas fa-quote-left"></i> Notable Quotes</h3>
                             <div class="quote">
                                 "Every time a new CEO takes over a company, it's like there's a new sheriff in town. The changes that follow often reshape the entire organization."
-                                <cite>- Business Weekly, 2024</cite>
-                            </div>
-                            <div class="quote">
-                                "In sports, when a new coach arrives, players know there's a new sheriff in town. The old rules might not apply anymore."
-                                <cite>- Sports Illustrated, 2023</cite>
                             </div>
                         </div>
                     </div>
@@ -104,58 +75,27 @@
             </div>
         </section>
 
-        <!-- Social Media Section -->
         <section id="social" class="hidden-section">
             <div class="container">
                 <h2><i class="fas fa-comments"></i> Social Media Buzz</h2>
                 <div class="social-feed">
                     <div class="post">
                         <img src="https://images.unsplash.com/photo-1558958267-ec665c2dcb6b" alt="Old West Town" class="post-image">
-                        <div class="post-content">
-                            <h4>@WesternHistory</h4>
-                            <p>"The phrase 'new sheriff in town' was literally used in Dodge City when Wyatt Earp took office! #WildWest #History"</p>
-                            <span class="timestamp">2 hours ago</span>
-                        </div>
+                        <h4>@WesternHistory</h4>
+                        <p>The role of sheriffs in shaping the American West cannot be understated. They were more than law enforcers; they were community leaders. #WildWest #History</p>
+                        <span class="timestamp">2 hours ago</span>
                     </div>
 
                     <div class="post">
-                        <div class="post-content">
-                            <h4>@BusinessInsights</h4>
-                            <p>"Just witnessed a perfect example of 'new sheriff in town' when our new CEO completely restructured the management team on day one. Change is coming! 🌟 #Leadership"</p>
-                            <span class="timestamp">5 hours ago</span>
-                        </div>
-                    </div>
-
-                    <div class="post">
-                        <img src="https://images.unsplash.com/photo-1565057430174-c0ea4fd87458" alt="Modern Office" class="post-image">
-                        <div class="post-content">
-                            <h4>@CorporateCulture</h4>
-                            <p>"How to handle the 'new sheriff in town' syndrome: Tips for both leaders and team members during transitions. #WorkplaceCulture"</p>
-                            <span class="timestamp">1 day ago</span>
-                        </div>
-                    </div>
-
-                    <div class="post">
-                        <div class="post-content">
-                            <h4>@MovieQuotes</h4>
-                            <p>"Top 10 'new sheriff in town' moments in Western films! From High Noon to Tombstone, these scenes defined the genre. 🤠 #WesternMovies"</p>
-                            <span class="timestamp">2 days ago</span>
-                        </div>
-                    </div>
-
-                    <div class="post">
-                        <img src="https://images.unsplash.com/photo-1551891228-862e4f91754e" alt="Sports Stadium" class="post-image">
-                        <div class="post-content">
-                            <h4>@SportsCenter</h4>
-                            <p>"With the new coach implementing strict training regimens, there's definitely a new sheriff in town! Team culture is changing fast. ⚽️ #SportsNews"</p>
-                            <span class="timestamp">3 days ago</span>
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1533106497176-45ae19e68ba2" alt="Desert Landscape" class="post-image">
+                        <h4>@ProverbStudent</h4>
+                        <p>Fascinating how a simple phrase from the Old West has become such a powerful metaphor for leadership change! #Proverbs #Leadership</p>
+                        <span class="timestamp">5 hours ago</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Related Content Section -->
         <section id="related" class="hidden-section">
             <div class="container">
                 <h2><i class="fas fa-hat-cowboy"></i> Related Proverbs & Humor</h2>
@@ -164,16 +104,10 @@
                         <div class="content-card">
                             <h3>Similar Proverbs & Sayings</h3>
                             <ul class="proverb-list">
-                                <li>"This town ain't big enough for the both of us"</li>
-                                <li>"Law and order has come to town"</li>
-                                <li>"Time to clean up this town"</li>
-                                <li>"Things are gonna change around here"</li>
-                                <li>"Meet your new boss"</li>
-                                <li>"Under new management"</li>
-                                <li>"The times they are a-changin'"</li>
-                                <li>"Out with the old, in with the new"</li>
-                                <li>"Turn over a new leaf"</li>
-                                <li>"New broom sweeps clean"</li>
+                                <li>"The law's the law"</li>
+                                <li>"Justice rides a slow horse"</li>
+                                <li>"Right is might"</li>
+                                <li>"Change brings change"</li>
                             </ul>
                         </div>
 
@@ -181,35 +115,23 @@
                             <h3>Modern Variations</h3>
                             <ul class="variation-list">
                                 <li>"There's a new CEO in the boardroom"</li>
-                                <li>"There's a new coach on the sideline"</li>
+                                <li>"There's a new coach on the field"</li>
                                 <li>"There's a new principal in the school"</li>
                                 <li>"There's a new manager in the office"</li>
-                                <li>"There's a new leader at the helm"</li>
                             </ul>
                         </div>
                     </div>
+
                     <div class="content-half">
                         <div class="content-card">
                             <h3>Western Jokes & Humor</h3>
                             <div class="joke">
-                                <p>What did the new sheriff say to his deputy?</p>
-                                <p class="punchline">"Badge news travels fast!"</p>
+                                <p>Why did the new sheriff bring a ladder to work?</p>
+                                <p class="punchline">Because he heard crime was up!</p>
                             </div>
                             <div class="joke">
-                                <p>Why did the new sheriff bring a ruler to work?</p>
-                                <p class="punchline">To establish law AND order!</p>
-                            </div>
-                            <div class="joke">
-                                <p>What's a sheriff's favorite type of math?</p>
-                                <p class="punchline">LAW-gebra!</p>
-                            </div>
-                            <div class="joke">
-                                <p>Why don't sheriffs tell dad jokes?</p>
-                                <p class="punchline">Because they're already telling cop jokes!</p>
-                            </div>
-                            <div class="joke">
-                                <p>How does a new sheriff take his coffee?</p>
-                                <p class="punchline">Law-tte!</p>
+                                <p>What did the old sheriff say to the new sheriff?</p>
+                                <p class="punchline">"This town ain't big enough for the both of us!"</p>
                             </div>
                         </div>
 
@@ -217,10 +139,9 @@
                             <h3>Fun Facts & Trivia</h3>
                             <ul class="trivia-list">
                                 <li>The word "sheriff" comes from "shire reeve"</li>
-                                <li>Wyatt Earp served as deputy sheriff in multiple territories</li>
-                                <li>The first female sheriff was appointed in 1926</li>
-                                <li>The sheriff's star badge has become a universal symbol of law enforcement</li>
-                                <li>Some sheriffs served in multiple towns during their careers</li>
+                                <li>First US sheriff appointed in 1634</li>
+                                <li>Sheriffs were often elected officials</li>
+                                <li>Badge shape varies by region</li>
                             </ul>
                         </div>
                     </div>
@@ -231,7 +152,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Western Proverbs | <i class="fas fa-horse"></i> Ride Safe!</p>
+            <p>&copy; 2025 Western Proverbs | A collection of Wild West wisdom</p>
         </div>
     </footer>
 

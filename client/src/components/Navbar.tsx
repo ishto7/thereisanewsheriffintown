@@ -31,7 +31,7 @@ export default function Navbar() {
           <div className="flex items-center gap-2">
             <BadgeIcon className="h-8 w-8 text-amber-800" />
             <Badge variant="outline" className="font-rye text-lg">
-              Sheriff's Tales & Wisdom
+              Wild West Sheriff
             </Badge>
           </div>
 

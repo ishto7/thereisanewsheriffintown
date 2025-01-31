@@ -7,7 +7,7 @@
             <Card v-for="platform in socialPosts" :key="platform.platform" class="western-card">
               <CardContent class="p-6 space-y-4">
                 <div class="flex items-center gap-2">
-                  <component :is="platformIcon[platform.icon]" class="h-6 w-6 text-amber-800" />
+                  <component :is="platformIcon[platform.platform]" class="h-6 w-6 text-amber-800" />
                   <Badge class="bg-amber-800 text-amber-50">
                     {{ platform.platform }}
                   </Badge>
@@ -48,17 +48,16 @@
 </template>
 
 <script setup lang="ts">
-import { Card, CardContent } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { ScrollArea } from '@/components/ui/scroll-area'
-import { SiX, SiReddit, SiInstagram, SiLinkedin } from 'react-icons/si'
+import { Card, CardContent } from '@/components/ui/Card.vue'
+import { Badge } from '@/components/ui/Badge.vue'
+import { ScrollArea } from '@/components/ui/ScrollArea.vue'
 import { socialPosts, type SocialPost } from '@/data/social'
 
 const platformIcon = {
-  SiX,
-  SiReddit,
-  SiInstagram,
-  SiLinkedin
+  Reddit: '🤖',
+  Twitter: '🐦',
+  Instagram: '📸',
+  LinkedIn: '💼'
 }
 
 const getLikes = (post: SocialPost, platform: string) => {

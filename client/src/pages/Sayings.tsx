@@ -1,8 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { sayings, usageContexts } from "@/data/sayings";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { sayings } from "@/data/sayings";
 
 export default function Sayings() {
   return (
@@ -14,66 +13,55 @@ export default function Sayings() {
               {sayings.map((saying, index) => (
                 <Card key={index} className="western-card">
                   <CardContent className="p-6">
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div className="space-y-6">
-                        <div className="space-y-2">
-                          <p className="text-xl text-amber-900 italic">
-                            "{saying.quote}"
-                          </p>
-                          <div className="flex gap-2">
-                            <Badge variant="outline" className="text-amber-800">
-                              {saying.origin}
-                            </Badge>
-                          </div>
-                        </div>
-
-                        <div className="space-y-4">
-                          <div className="space-y-2">
-                            <p className="text-amber-800">{saying.meaning}</p>
-                          </div>
-
-                          <div className="space-y-2">
-                            <p className="text-amber-800">{saying.context}</p>
-                          </div>
-
-                          <div className="space-y-2">
-                            <div className="flex gap-2 flex-wrap">
-                              {saying.variants.map((variant, i) => (
-                                <Badge
-                                  key={i}
-                                  variant="secondary"
-                                  className="bg-amber-100 text-amber-800"
-                                >
-                                  {variant}
-                                </Badge>
-                              ))}
-                            </div>
-                          </div>
-
-                          <div className="space-y-2">
-                            <div className="flex gap-2 flex-wrap">
-                              {saying.regions.map((region, i) => (
-                                <Badge
-                                  key={i}
-                                  variant="outline"
-                                  className="bg-amber-50 text-amber-900"
-                                >
-                                  {region}
-                                </Badge>
-                              ))}
-                            </div>
-                          </div>
+                    <div className="space-y-6">
+                      <div className="space-y-2">
+                        <p className="text-xl text-amber-900 italic">
+                          "{saying.quote}"
+                        </p>
+                        <div className="flex gap-2">
+                          <Badge variant="outline" className="text-amber-800">
+                            {saying.origin}
+                          </Badge>
                         </div>
                       </div>
 
                       <div className="space-y-4">
-                        <AspectRatio ratio={16/9} className="overflow-hidden rounded-lg">
-                          <img
-                            src={saying.image}
-                            alt={`Illustration for ${saying.quote}`}
-                            className="object-cover w-full h-full"
-                          />
-                        </AspectRatio>
+                        <div className="space-y-2">
+                          <p className="text-amber-800">{saying.meaning}</p>
+                        </div>
+
+                        <div className="space-y-2">
+                          <p className="text-amber-800">{saying.context}</p>
+                        </div>
+
+                        <div className="space-y-2">
+                          <div className="flex gap-2 flex-wrap">
+                            {saying.variants.map((variant, i) => (
+                              <Badge
+                                key={i}
+                                variant="secondary"
+                                className="bg-amber-100 text-amber-800"
+                              >
+                                {variant}
+                              </Badge>
+                            ))}
+                          </div>
+                        </div>
+
+                        <div className="space-y-2">
+                          <div className="flex gap-2 flex-wrap">
+                            {saying.regions.map((region, i) => (
+                              <Badge
+                                key={i}
+                                variant="outline"
+                                className="bg-amber-50 text-amber-900"
+                              >
+                                {region}
+                              </Badge>
+                            ))}
+                          </div>
+                        </div>
+
                         <div className="flex gap-2 flex-wrap">
                           {saying.usage.split(", ").map((context, i) => (
                             <Badge

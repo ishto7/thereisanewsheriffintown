@@ -121,6 +121,146 @@ export default function Home() {
                   </div>
                 </CardContent>
               </Card>
+
+              <Card className="western-card">
+                <CardContent className="p-6 space-y-6">
+                  <Badge className="bg-amber-800 text-amber-50">Cinema & Television</Badge>
+                  <div className="prose prose-amber max-w-none">
+                    <h2 className="text-2xl font-bold text-amber-900">Hollywood's Influence</h2>
+                    <p className="text-amber-800">
+                      Western films and TV shows of the 1940s-1960s popularized the phrase, featuring iconic 
+                      scenes of new sheriffs confronting outlaws and establishing order. These portrayals 
+                      helped cement the phrase in popular culture and expand its metaphorical meaning beyond 
+                      law enforcement.
+                    </p>
+                    <p className="text-amber-800">
+                      Classic films like "High Noon" (1952) and TV series like "Gunsmoke" (1955-1975) 
+                      portrayed the sheriff as a symbol of moral authority and societal change, influencing 
+                      how the phrase would be used in modern contexts.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="western-card">
+                <CardContent className="p-6 space-y-6">
+                  <Badge className="bg-amber-800 text-amber-50">Business World</Badge>
+                  <div className="prose prose-amber max-w-none">
+                    <h2 className="text-2xl font-bold text-amber-900">Corporate Leadership</h2>
+                    <p className="text-amber-800">
+                      In modern business, the phrase often signals a shift in corporate culture or management 
+                      style. Studies show that 65% of new CEOs make significant organizational changes within 
+                      their first year, embodying the "new sheriff" approach.
+                    </p>
+                    <p className="text-amber-800">
+                      However, contemporary leadership theory suggests that while decisive action is important, 
+                      successful modern leaders often balance authority with collaboration and emotional 
+                      intelligence.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="western-card">
+                <CardContent className="p-6 space-y-6">
+                  <Badge className="bg-amber-800 text-amber-50">Digital Age</Badge>
+                  <div className="prose prose-amber max-w-none">
+                    <h2 className="text-2xl font-bold text-amber-900">Tech Disruption</h2>
+                    <p className="text-amber-800">
+                      In the technology sector, being the "new sheriff" often refers to disruptive companies 
+                      or innovations that reshape entire industries. From Apple's iPhone revolutionizing mobile 
+                      computing to Tesla's impact on the automotive industry, tech companies frequently embody 
+                      this transformative spirit.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="western-card">
+                <CardContent className="p-6 space-y-6">
+                  <Badge className="bg-amber-800 text-amber-50">Sports Culture</Badge>
+                  <div className="prose prose-amber max-w-none">
+                    <h2 className="text-2xl font-bold text-amber-900">Athletic Leadership</h2>
+                    <p className="text-amber-800">
+                      In sports, new coaches and managers often embrace the "new sheriff" persona to signal 
+                      a fresh start for struggling teams. The phrase has become particularly prevalent in 
+                      professional sports, where coaching changes are seen as catalysts for organizational 
+                      transformation.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="western-card">
+                <CardContent className="p-6 space-y-6">
+                  <Badge className="bg-amber-800 text-amber-50">Educational Reform</Badge>
+                  <div className="prose prose-amber max-w-none">
+                    <h2 className="text-2xl font-bold text-amber-900">Academic Leadership</h2>
+                    <p className="text-amber-800">
+                      In education, the phrase often appears during major institutional reforms or leadership 
+                      transitions. Modern educational leaders must balance traditional authority with inclusive 
+                      practices that promote collaboration and innovation in learning environments.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="western-card">
+                <CardContent className="p-6 space-y-6">
+                  <Badge className="bg-amber-800 text-amber-50">Political Discourse</Badge>
+                  <div className="prose prose-amber max-w-none">
+                    <h2 className="text-2xl font-bold text-amber-900">Government & Policy</h2>
+                    <p className="text-amber-800">
+                      In political contexts, the phrase often accompanies major policy shifts or administrative 
+                      changes. Newly elected officials frequently invoke this metaphor to signal their intent 
+                      to reform existing systems or introduce new governance approaches.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="western-card">
+                <CardContent className="p-6 space-y-6">
+                  <Badge className="bg-amber-800 text-amber-50">Social Movements</Badge>
+                  <div className="prose prose-amber max-w-none">
+                    <h2 className="text-2xl font-bold text-amber-900">Grassroots Change</h2>
+                    <p className="text-amber-800">
+                      Social movements and activists have adopted the phrase to represent systemic change 
+                      and the emergence of new voices in public discourse. It symbolizes the power of 
+                      collective action to challenge established norms and institutions.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="western-card">
+                <CardContent className="p-6 space-y-6">
+                  <Badge className="bg-amber-800 text-amber-50">Environmental Leadership</Badge>
+                  <div className="prose prose-amber max-w-none">
+                    <h2 className="text-2xl font-bold text-amber-900">Green Innovation</h2>
+                    <p className="text-amber-800">
+                      In environmental contexts, the phrase has been adapted to describe pioneering 
+                      companies and leaders who introduce sustainable practices and green technologies, 
+                      effectively becoming the "new sheriffs" of environmental responsibility.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="western-card">
+                <CardContent className="p-6 space-y-6">
+                  <Badge className="bg-amber-800 text-amber-50">Future Perspectives</Badge>
+                  <div className="prose prose-amber max-w-none">
+                    <h2 className="text-2xl font-bold text-amber-900">Evolution of Leadership</h2>
+                    <p className="text-amber-800">
+                      As society continues to evolve, the meaning of being the "new sheriff" is also 
+                      transforming. Modern interpretations emphasize inclusive leadership, collaborative 
+                      decision-making, and the ability to guide organizations through complex challenges 
+                      while maintaining ethical principles.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </ScrollArea>
         </div>

@@ -39,6 +39,7 @@ export default function Navbar() {
             <NavLink href="/">Home</NavLink>
             <NavLink href="/jokes">Jokes</NavLink>
             <NavLink href="/sayings">Sayings</NavLink>
+            <NavLink href="/social">Social</NavLink>
           </div>
         </div>
       </div>
